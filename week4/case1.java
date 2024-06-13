@@ -1,65 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum4;
+package week4;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal1 {
+public class case1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int panjang, lebar, tinggi;
-        System.out.println("Program Balok");
+        int length, width, height;
+
+        System.out.println("Cuboid Program");
         System.out.println("==========================");
+        System.out.println("1. Cuboid Perimeter \n2. Cuboid Surface Area \n3. Cuboid Volume");
 
-        System.out.println("1. Keliling Balok \n2. Luas Balok \n3. Volume Balok");
+        System.out.print("Enter Your Choice = ");
+        int choice = input.nextInt();
 
-        System.out.print("Masukan Pilihan Anda = ");
-        int pilihan = input.nextInt();
-
-        switch (pilihan) {
+        switch (choice) {
             case 1:
-                System.out.println("Keliling Balok");
-                System.out.print("Masukan Panjang = ");
-                panjang = input.nextInt();
-                System.out.print("Masukan Lebar = ");
-                lebar = input.nextInt();
-                System.out.print("Masukan Tinggi = ");
-                tinggi = input.nextInt();
-                int keliling = 4 * (panjang + lebar + tinggi);
-                System.out.println("Keliling Balok = " + keliling);
+                System.out.println("Cuboid Perimeter");
+                System.out.print("Enter Length = ");
+                length = input.nextInt();
+                System.out.print("Enter Width = ");
+                width = input.nextInt();
+                System.out.print("Enter Height = ");
+                height = input.nextInt();
+                int perimeter = 4 * (length + width + height);
+                System.out.println("Cuboid Perimeter = " + perimeter);
                 break;
             case 2:
-                System.out.println("Luas Balok");
-                System.out.print("Masukan Panjang = ");
-                panjang = input.nextInt();
-                System.out.print("Masukan Lebar = ");
-                lebar = input.nextInt();
-                System.out.print("Masukan Tinggi = ");
-                tinggi = input.nextInt();
-                int luas = 2 * (panjang * lebar + panjang * tinggi + lebar * tinggi);
-                System.out.println("Luas Balok = " + luas);
+                System.out.println("Cuboid Surface Area");
+                System.out.print("Enter Length = ");
+                length = input.nextInt();
+                System.out.print("Enter Width = ");
+                width = input.nextInt();
+                System.out.print("Enter Height = ");
+                height = input.nextInt();
+                int surfaceArea = 2 * (length * width + length * height + width * height);
+                System.out.println("Cuboid Surface Area = " + surfaceArea);
                 break;
             case 3:
-                System.out.println("Volume Balok");
-                System.out.print("Masukan Panjang = ");
-                panjang = input.nextInt();
-                System.out.print("Masukan Lebar = ");
-                lebar = input.nextInt();
-                System.out.print("Masukan Tinggi = ");
-                tinggi = input.nextInt();
-                int volume = panjang * lebar * tinggi;
-                System.out.println("Volume Balok = " + volume);
+                System.out.println("Cuboid Volume");
+                System.out.print("Enter Length = ");
+                length = input.nextInt();
+                System.out.print("Enter Width = ");
+                width = input.nextInt();
+                System.out.print("Enter Height = ");
+                height = input.nextInt();
+                int volume = length * width * height;
+                System.out.println("Cuboid Volume = " + volume);
                 break;
             default:
-                System.err.println("Pilihan Tidak Tersedia");
+                System.err.println("Choice Not Available");
+                break;
         }
-
     }
-
 }
