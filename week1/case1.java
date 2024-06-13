@@ -7,7 +7,7 @@ public class case1 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Input Name = ");
-        String nama = input.nextLine();
+        String name = input.nextLine();
 
         System.out.print("Input NIM = ");
         String NIM = input.nextLine();
