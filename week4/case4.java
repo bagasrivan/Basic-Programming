@@ -1,65 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum4;
+package week4;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal4 {
+public class case4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Jumlah Hari Pada Bulan");
+        System.out.println("Number of Days in a Month");
         System.out.println("======================");
-        System.out.print("Masukan Bulan = ");
-        String bulan = input.nextLine();
+        System.out.print("Enter the Month = ");
+        String month = input.nextLine();
 
-        switch (bulan) {
-            case "Januari":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 31");
+        switch (month.toLowerCase()) {
+            case "january":
+                System.out.println("Number of Days in " + month + " is 31");
                 break;
-            case "Februari":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 28");
+            case "february":
+                System.out.println("Number of Days in " + month + " is 28");
                 break;
-            case "Maret":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 31");
-            break;
-            case "April":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 30");
-            break;
-            case "Mei":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 31");
-            break;
-            case "Juni":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 30");
-            break;
-            case "Juli":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 31");
-            break;
-            case "Agustus":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 31");
-            break;
-            case "September":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 30");
-            break;
-            case "Oktober":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 31");
-            break;
-            case "November":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 30");
-            break;
-            case "Desember":
-                System.out.println("Jumlah Hari Pada Bulan " + bulan + " Adalah 31");
-            break;
-
+            case "march":
+                System.out.println("Number of Days in " + month + " is 31");
+                break;
+            case "april":
+                System.out.println("Number of Days in " + month + " is 30");
+                break;
+            case "may":
+                System.out.println("Number of Days in " + month + " is 31");
+                break;
+            case "june":
+                System.out.println("Number of Days in " + month + " is 30");
+                break;
+            case "july":
+                System.out.println("Number of Days in " + month + " is 31");
+                break;
+            case "august":
+                System.out.println("Number of Days in " + month + " is 31");
+                break;
+            case "september":
+                System.out.println("Number of Days in " + month + " is 30");
+                break;
+            case "october":
+                System.out.println("Number of Days in " + month + " is 31");
+                break;
+            case "november":
+                System.out.println("Number of Days in " + month + " is 30");
+                break;
+            case "december":
+                System.out.println("Number of Days in " + month + " is 31");
+                break;
             default:
                 System.err.println("Invalid Month");
+                break;
         }
     }
-
 }
