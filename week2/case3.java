@@ -1,34 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum2;
+package week2;
+
 import java.util.Scanner;
-/**
- *
- * @author Bagaskara
- */
-public class Soal3 {
+
+public class case3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-       
-        double r;    
-        double hasil;
-        
-            System.out.print("Masukan Nilai 1 = ");
-            double nilai1 = input.nextDouble();
-               
-                System.out.print("Masukan Nilai 2 = ");
-                double nilai2 = input.nextDouble();
-                
-                    System.out.print("Masukan Nilai 3 = ");
-                    double nilai3 = input.nextDouble();
-                    
-                    r = nilai1+nilai2+nilai3;
-                    hasil = r/3;
-                        
-                        System.out.println("Rata-Rata= " + hasil);
+
+        double sum;
+        double average;
+
+        System.out.print("Enter Value 1 = ");
+        double value1 = input.nextDouble();
+
+        System.out.print("Enter Value 2 = ");
+        double value2 = input.nextDouble();
+
+        System.out.print("Enter Value 3 = ");
+        double value3 = input.nextDouble();
+
+        sum = value1 + value2 + value3;
+        average = sum / 3;
+
+        System.out.println("Average = " + average);
     }
-    
 }
