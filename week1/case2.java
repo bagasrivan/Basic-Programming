@@ -12,7 +12,6 @@ public class case2 {
         System.out.print("Input NIM = ");
         String NIM = input.nextLine();
 
-        System.out.println(
-                "Halo, Saya " + nama + " dengan NIM " + NIM + " dari program studi Ilmu Komputer. Salam Kenal.");
+        System.out.println("Halo, Saya " + nama + " dengan NIM " + NIM + " dari program studi Ilmu Komputer. Salam Kenal.");
     }
 }
