@@ -1,54 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum3;
+package week3;
+
 import java.util.Scanner;
-/**
- *
- * @author Bagaskara
- */
-public class Soal4 {
+
+public class case4 {
     public static void main(String[] args) {
-        int menu;
-        int harga = 10000;
-        int jumlahminuman;
         Scanner input = new Scanner(System.in);
-        System.out.println("Toko Minuman Berkah Membahana");
+        int menu;
+        int price = 10000;
+        int quantityOfDrinks;
+
+        System.out.println("Berkah Membahana Drink Shop");
         System.out.println("==============================");
-        System.out.println("Pilihan Menu\n 1. Beli Minuman\n 2. Keluar");
-        
-        System.out.println("Pilih Menu = ");
+        System.out.println("Menu Options\n 1. Buy Drinks\n 2. Exit");
+
+        System.out.print("Select Menu = ");
         menu = input.nextInt();
-        
-        if (menu == 1)
-        {
-            System.out.println("Jumlah Minuman = ");
-            jumlahminuman = input.nextInt();
-            int totalharga = jumlahminuman*10000;
-            
-            if (totalharga > 50000)
-            {
-                int diskon = totalharga*10/100;
-                int totalseluruh = totalharga-diskon;
-               System.out.println("Anda Membeli Minuman Sebanyak " + jumlahminuman + " Dengan Total Harga Rp." + totalharga + " Dan Potongan Rp." + diskon + " Total Belanja Keseluruhan " + totalseluruh);
+
+        if (menu == 1) {
+            System.out.print("Quantity of Drinks = ");
+            quantityOfDrinks = input.nextInt();
+            int totalPrice = quantityOfDrinks * price;
+
+            if (totalPrice > 50000) {
+                int discount = totalPrice * 10 / 100;
+                int finalTotal = totalPrice - discount;
+                System.out.println("You bought " + quantityOfDrinks + " drinks with a total price of Rp." + totalPrice
+                        + " and a discount of Rp." + discount + ". Your total payment is Rp." + finalTotal);
+            } else if (totalPrice > 30000) {
+                int discount2 = totalPrice * 5 / 100;
+                int finalTotal2 = totalPrice - discount2;
+                System.out.println("You bought " + quantityOfDrinks + " drinks with a total price of Rp." + totalPrice
+                        + " and a discount of Rp." + discount2 + ". Your total payment is Rp." + finalTotal2);
+            } else {
+                System.out.println("You bought " + quantityOfDrinks + " drinks with a total price of Rp." + totalPrice);
             }
-            else if (totalharga > 30000)
-            {
-                int diskon2 = totalharga*5/100;
-                int totalseluruh2 = totalharga-diskon2;
-                System.out.println("Anda Membeli Minuman Sebanyak " + jumlahminuman + " Dengan Total Harga Rp." + totalharga + " Dan Potongan Rp." + diskon2 + " Total Belanja Keseluruhan " + totalseluruh2);
-            }
-        }
-        else if(menu == 2) 
-        {
-            System.err.println("Anda keluar dari program ini");
-        }
-        else 
-        {
-            System.err.println("Menu Tidak Tersedia");
+        } else if (menu == 2) {
+            System.err.println("You have exited the program");
+        } else {
+            System.err.println("Menu Not Available");
         }
     }
-    
 }
