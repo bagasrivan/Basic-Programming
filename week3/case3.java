@@ -1,39 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum3;
+package week3;
+
 import java.util.Scanner;
-/**
- *
- * @author Bagaskara
- */
-public class Soal3 {
+
+public class case3 {
     public static void main(String[] args) {
-        int belanja, jumlahitem, cashback;
-        
-        System.out.println("Belanja Hari Ini Beli 2 Gratis 1!!!");
-        System.out.println("Dan Ada Cashback Juga, *syarat dan ketentuan berlaku");
+        int totalShopping, totalItems, cashback;
+
+        System.out.println("Today's Shopping: Buy 2 Get 1 Free!!!");
+        System.out.println("And there's Cashback too, *terms and conditions apply");
         Scanner input = new Scanner(System.in);
         System.out.println("===============================");
-        
-        System.out.println("Masukan Total Belanja = ");
-        belanja = input.nextInt();
-        
-        if (belanja % 5 == 0 && belanja % 2 == 0) 
-        {
-            cashback = 15000 * (belanja / 5);
-            jumlahitem = belanja + (belanja / 2);
-        } 
-        
-        else {cashback = 15000 * (belanja / 5);
-        jumlahitem = belanja + (belanja / 2);
+
+        System.out.print("Enter Total Shopping = ");
+        totalShopping = input.nextInt();
+
+        if (totalShopping % 5 == 0 && totalShopping % 2 == 0) {
+            cashback = 15000 * (totalShopping / 5);
+            totalItems = totalShopping + (totalShopping / 2);
+        } else {
+            cashback = 15000 * (totalShopping / 5);
+            totalItems = totalShopping + (totalShopping / 2);
         }
-        System.out.println("Anda Membeli\t" + belanja + "\tItem Dengan Bonus  Sebanyak\t" +(jumlahitem-belanja) + "\tItem, Total Item Yang Anda Dapatkan Sebanyak\t" + jumlahitem + "\tItem");
-        System.out.println("Anda Mendapat Cashback = " + cashback);
-        System.out.println("Terimakasih");
+        System.out.println("You bought\t" + totalShopping + "\titems with a bonus of\t" + (totalItems - totalShopping)
+                + "\titems, making a total of\t" + totalItems + "\titems");
+        System.out.println("You received a cashback of = " + cashback);
+        System.out.println("Thank you");
         System.out.println("===================================");
     }
-    
 }
