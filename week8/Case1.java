@@ -1,32 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum8;
+package week8;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal1 {
+public class Case1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Program Menentukan Umur User");
+        String name;
+        int birthYear;
+        
+        System.out.println("Program to Determine User Age");
         System.out.println("========");
-        String nama;
-        int tahun;
-        System.out.print("Masukan Nama Anda = ");
-        nama = input.next();
-        System.out.print("Masukan Tahun Lahir Anda = ");
-        tahun = input.nextInt();
-        int umur = 2022 - tahun;
-        System.out.println(bio(nama, umur));
-
+       
+        System.out.print("Enter Your Name = ");
+        name = input.next();
+        System.out.print("Enter Your Birth Year = ");
+        birthYear = input.nextInt();
+        
+        int age = 2022 - birthYear;
+        System.out.println(bio(name, age));
     }
 
-    public static String bio(String nama, int umur) {
-        return "Umur " + nama + " Adalah " + umur + " Tahun";
+    public static String bio(String name, int age) {
+        return name + " is " + age + " years old";
     }
 }
