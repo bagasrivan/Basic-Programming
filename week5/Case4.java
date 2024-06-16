@@ -2,7 +2,7 @@ package week5;
 
 import java.util.Scanner;
 
-public class case4 {
+public class Case4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         long totalNumbers, initialValue, difference, fibonacci;
