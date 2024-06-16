@@ -1,26 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum8;
+package week8;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal3 {
+public class Case3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int a, r, n, sn, sn2;
-        System.out.println("Program Menghitung Deret Geometri");
+        
+        System.out.println("Geometric Series Calculation Program");
         System.out.println("=============================");
-        System.out.print("Masukan a = ");
+        
+        System.out.print("Enter a = ");
         a = input.nextInt();
-        System.out.print("Masukan r = ");
+        System.out.print("Enter r = ");
         r = input.nextInt();
-        System.out.print("Masukan n = ");
+        System.out.print("Enter n = ");
         n = input.nextInt();
 
         sn = (int) (a * (Math.pow(r, n) - 1)) / (r - 1);
@@ -34,10 +28,10 @@ public class Soal3 {
     }
 
     public static String geo(int n, int sn) {
-        return "Jumlah " + n + " Suku Pertama Barisan Geometri Tersebut Adalah " + sn;
+        return "Sum of the First " + n + " Terms of the Geometric Sequence is " + sn;
     }
 
     public static String metri(int n, int sn2) {
-        return "Jumlah " + n + " Suku Pertama Barisan Geometri Tersebut Adalah " + sn2;
+        return "Sum of the First " + n + " Terms of the Geometric Sequence is " + sn2;
     }
 }
