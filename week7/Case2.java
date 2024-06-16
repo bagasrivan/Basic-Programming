@@ -1,54 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum7;
+package week7;
+
 import java.util.Scanner;
-/**
- *
- * @author Bagaskara
- */
-public class Soal2 {
+
+public class Case2 {
     public static void main(String[] args) {
-        int angka;
         Scanner input = new Scanner(System.in);
-        System.out.println("Selamat Datang");
-        System.out.println("Masukan Angka Untuk Menentukan Bilangan Prima dan Fibonacci");
-        System.out.print("Masukan Angka = ");
-        angka = input.nextInt();
-        prima(angka);
-        fibonacci(angka);
+        int number;
+        
+        System.out.println("Welcome");
+        System.out.println("Please Enter a Number to Determine Prime and Fibonacci Numbers");
+        System.out.print("Enter a Number = ");
+        number = input.nextInt();
+        
+        checkPrime(number);
+        checkFibonacci(number);
     }
-    public static void prima (int angka) {
-        int num = angka;
-        boolean kondisi = false;
+
+    public static void checkPrime(int number) {
+        int num = number;
+        boolean isPrime = true;
         for (int i = 2; i <= num / 2; ++i) {
             if (num % i == 0) {
-                kondisi = true;
+                isPrime = false;
                 break;
             }
         }
-        if (!kondisi) {
-            System.out.println(angka + " Adalah Bilangan Prima");
+        if (isPrime) {
+            System.out.println(number + " is a Prime Number");
         } else {
-            System.out.println(angka + " Bukan Bilangan Prima");
+            System.out.println(number + " is Not a Prime Number");
         }
     }
-    
-    public static void fibonacci (int angka) {
+
+    public static void checkFibonacci(int number) {
         int a = 1;
         int b = 1;
         int fibo = a + b;
-        while (fibo <= angka) {
-            if (fibo == angka) {
-                System.out.println(angka + " Adalah Bilangan Fibonacci");
+        while (fibo <= number) {
+            if (fibo == number) {
+                System.out.println(number + " is a Fibonacci Number");
                 return;
             }
             a = b;
             b = fibo;
             fibo = a + b;
         }
-        System.out.println(angka + " Bukan Bilangan Fibbonaci");
+        System.out.println(number + " is Not a Fibonacci Number");
     }
 }
