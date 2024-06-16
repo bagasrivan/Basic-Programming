@@ -2,7 +2,7 @@ package week5;
 
 import java.util.Scanner;
 
-public class case1 {
+public class Case1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int min = 999999, max = -9999999;
