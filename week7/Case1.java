@@ -1,85 +1,78 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum7;
+package week7;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal1 {
+public class Case1 {
     public static void main(String[] args) {
-        int menu, a = 1;
         Scanner input = new Scanner(System.in);
+        int menu, a = 1;
+        
         do {
-            System.out.println("Selamat Datang, Pilihan Menu : ");
-            System.out.println("1.Bilangan Positif, Negatif, Nol \n2.Bilangan Ganjil, Genap \n3.Input Ulang Angka");
-            System.out.print("Masukan Pilihan Menu = ");
+            System.out.println("Welcome, Menu Options: ");
+            System.out.println("1. Positive, Negative, Zero Numbers \n2. Odd, Even Numbers \n3. Re-enter Choice");
+            System.out.print("Enter Menu Choice = ");
             menu = input.nextInt();
 
             if (menu == 1) {
-                pnn();
+                pnz();
                 System.out.println("=========");
             } else if (menu == 2) {
-                gg();
+                oe();
                 System.out.println("=========");
             } else if (menu == 3) {
-                System.out.println("Silahkan Input Kembali Pilihan");
-                System.out.println("1.Bilangan Positif, Negatif, Nol \n2.Bilangan Ganjil, Genap \n3.Input Ulang Angka");
-                System.out.print("Masukan Pilihan Menu = ");
+                System.out.println("Please Re-enter Your Choice");
+                System.out.println("1. Positive, Negative, Zero Numbers \n2. Odd, Even Numbers \n3. Re-enter Choice");
+                System.out.print("Enter Menu Choice = ");
                 menu = input.nextInt();
 
                 if (menu == 1) {
-                    pnn();
+                    pnz();
                     System.out.println("=========");
                 } else if (menu == 2) {
-                    gg();
+                    oe();
                     System.out.println("=========");
                 }
             } else if (menu == 4) {
-                System.out.println("Program Berhenti");
+                System.out.println("Program Stopped");
                 a++;
             } else {
-                System.err.println("Pilihan Tidak Tersedia, Silahkan Masukan Pilihan Dengan Benar");
+                System.err.println("Invalid Choice, Please Enter a Valid Option");
             }
 
         } while (a < 2);
     }
 
-    public static void pnn() {
+    public static void pnz() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Selamat Datang Di Program Bilangan Positif, Negatif, dan Nol ");
-        System.out.print("Masukan Angka = ");
-        int angka = input.nextInt();
+        System.out.println("Welcome to the Positive, Negative, and Zero Number Program");
+        System.out.print("Enter a Number = ");
+        int number = input.nextInt();
 
-        if (angka != 0) {
-            if (angka > 0) {
-                System.out.println(angka + " Adalah Bilangan Positif");
-            } else if (angka < 0) {
-                System.out.println(angka + " Adalah Bilangan Negatif");
+        if (number != 0) {
+            if (number > 0) {
+                System.out.println(number + " is a Positive Number");
+            } else {
+                System.out.println(number + " is a Negative Number");
             }
         } else {
-            System.out.println(angka + " Adalah Nol");
+            System.out.println(number + " is Zero");
         }
     }
 
-    public static void gg() {
+    public static void oe() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Selamat Datang Di Program Bilangan Ganjil dan Genap");
-        System.out.print("Masukan Angka = ");
-        int angka = input.nextInt();
+        System.out.println("Welcome to the Odd and Even Number Program");
+        System.out.print("Enter a Number = ");
+        int number = input.nextInt();
 
-        if (angka != 0) {
-            if (angka % 2 == 0) {
-                System.out.println(angka + " Adalah Bilangan Genap");
+        if (number != 0) {
+            if (number % 2 == 0) {
+                System.out.println(number + " is an Even Number");
             } else {
-                System.out.println(angka + " Adalah Bilangan Ganjil");
+                System.out.println(number + " is an Odd Number");
             }
         } else {
-            System.out.println(angka + " Adalah NOL, Bukan Ganjil dan Genap");
+            System.out.println(number + " is ZERO, Neither Odd Nor Even");
         }
     }
 }
