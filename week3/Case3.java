@@ -2,7 +2,7 @@ package week3;
 
 import java.util.Scanner;
 
-public class case3 {
+public class Case3 {
     public static void main(String[] args) {
         int totalShopping, totalItems, cashback;
 
