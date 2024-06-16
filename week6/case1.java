@@ -1,39 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum6;
+package week6;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal1 {
+public class case1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int menu;
         int i = 1;
 
-        System.out.println("Selamat Datang Pada Program Lanjut");
+        System.out.println("Welcome to the Continue Program");
 
         do {
-            System.out.println("Pilihan Menu :");
-            System.out.println("1.Lanjut \n2.Berhenti");
-            System.out.print("Pilihan Menu = ");
+            System.out.println("Menu Options: ");
+            System.out.println("1. Continue \n2. Stop");
+            System.out.print("Menu Choice = ");
             menu = input.nextInt();
 
             if (menu == 1) {
-                System.out.println("Lanjut\n===========");
+                System.out.println("Continue\n===========");
             } else if (menu == 2) {
-                System.out.println("Anda Keluar Dari Program");
+                System.out.println("You have exited the program");
                 i++;
             } else {
-                System.err.println("Pilihan Tidak Tersedia");
+                System.err.println("Invalid Choice");
                 i++;
             }
-
         } while (i < 2);
     }
 }
