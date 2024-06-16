@@ -1,92 +1,84 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum8;
+package week8;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal2 {
+public class Case2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int menu = 0, r = 0, t = 0;
-        boolean cp = false;
-        System.out.println("Program Tabung");
+        int menu = 0, radius = 0, height = 0;
+        boolean isInputProvided = false;
+        
+        System.out.println("Cylinder Program");
         System.out.println("=============");
 
         do {
-            System.out.println("Pilihan Menu");
-            System.out.println("1.Input Jari-Jari \n2.Input Tinggi \n3.Hitung Luas Lingkaran \n4.Hitung Luas Selimut Tabung (Persegi) \n5.Hitung Luas Permukaan Tabung \n6.Keluar");
-            System.out.print("Masukan Pilihan Menu = ");
+            System.out.println("Menu Options");
+            System.out.println("1. Input Radius \n2. Input Height \n3. Calculate Circle Area \n4. Calculate Cylinder Surface Area (Rectangle) \n5. Calculate Cylinder Surface Area \n6. Exit");
+            System.out.print("Enter Menu Option = ");
             menu = input.nextInt();
 
             if (menu == 1) {
-                System.out.println("Silahkan Input Jari-Jari");
-                System.out.print("Masukan Nilai Jari-Jari = ");
-                r = input.nextInt();
-                System.out.println("Input Berhasil \n========");
-                cp = true;
+                System.out.println("Please Input Radius");
+                System.out.print("Enter Radius Value = ");
+                radius = input.nextInt();
+                System.out.println("Input Successful \n========");
+                isInputProvided = true;
             } else if (menu == 2) {
-                System.out.println("Silahkan Input Tinggi");
-                System.out.print("Masukan Nilai Tinggi = ");
-                t = input.nextInt();
-                System.out.println("Input Berhasil \n========");
-                cp = true;
+                System.out.println("Please Input Height");
+                System.out.print("Enter Height Value = ");
+                height = input.nextInt();
+                System.out.println("Input Successful \n========");
+                isInputProvided = true;
             } else if (menu == 3) {
-                if (cp == true) {
-                    luasLing(r);
+                if (isInputProvided) {
+                    calculateCircleArea(radius);
                 } else {
-                    System.out.println("Anda Belum Input Jari-Jari Atau Tinggi");
+                    System.out.println("You Have Not Input Radius or Height");
                     System.out.println("===============================");
                 }
             } else if (menu == 4) {
-                if (cp == true) {
-                    luasSelBung(r, t);
+                if (isInputProvided) {
+                    calculateCylinderSurfaceArea(radius, height);
                 } else {
-                    System.out.println("Anda Belum Input Jari-Jari Atau Tinggi");
+                    System.out.println("You Have Not Input Radius or Height");
                     System.out.println("===============================");
                 }
             } else if (menu == 5) {
-                if (cp == true) {
-                    luasPerBung(r, t);
+                if (isInputProvided) {
+                    calculateTotalSurfaceArea(radius, height);
                 } else {
-                    System.out.println("Anda Belum Input Jari-Jari Atau Tinggi");
+                    System.out.println("You Have Not Input Radius or Height");
                     System.out.println("===============================");
                 }
             } else if (menu == 6) {
-                System.out.println("Anda Telah Keluar Dari Program, Terimakasih");
+                System.out.println("You Have Exited the Program. Thank You!");
             } else {
-                System.err.println("Pilihan Tidak Tersedia, Silahkan Masukan Pilihan Dengan Benar");
+                System.err.println("Invalid Choice, Please Enter a Valid Option");
                 System.out.println("==================================================");
             }
-
         } while (menu != 6);
     }
 
-    public static double luasLing(double r) {
-        final double Phi = 3.14;
-        double luasLingkaran = Phi * r * r;
-        System.out.println("Luas Lingkaran = " + luasLingkaran);
+    public static double calculateCircleArea(double radius) {
+        final double PI = 3.14;
+        double circleArea = PI * radius * radius;
+        System.out.println("Circle Area = " + circleArea);
         System.out.println("============================");
-        return luasLingkaran;
+        return circleArea;
     }
 
-    public static double luasSelBung(double r, double t) {
-        final double Phi = 3.14;
-        double luasSelimutTabung = Phi * r * r * t;
-        System.out.println("Luas Selimut Tabung = " + luasSelimutTabung);
+    public static double calculateCylinderSurfaceArea(double radius, double height) {
+        final double PI = 3.14;
+        double cylinderSurfaceArea = PI * radius * radius * height;
+        System.out.println("Cylinder Surface Area = " + cylinderSurfaceArea);
         System.out.println("====================================");
-        return luasSelimutTabung;
+        return cylinderSurfaceArea;
     }
 
-    public static double luasPerBung(double r, double t) {
-        double luasPermukaanTabung = 2 * (luasLing(r) + (luasSelBung(r, t)));
-        System.out.println("Luas Permukaan Tabung = " + luasPermukaanTabung);
+    public static double calculateTotalSurfaceArea(double radius, double height) {
+        double totalSurfaceArea = 2 * (calculateCircleArea(radius) + (calculateCylinderSurfaceArea(radius, height)));
+        System.out.println("Total Cylinder Surface Area = " + totalSurfaceArea);
         System.out.println("==========================================");
-        return luasPermukaanTabung;
+        return totalSurfaceArea;
     }
 }
