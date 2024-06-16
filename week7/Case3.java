@@ -1,35 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum7;
+package week7;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal3 {
+public class Case3 {
     public static void main(String[] args) {
-        kelipatan();
+        multiples();
     }
 
-    public static void kelipatan() {
-        String answer;
+    public static void multiples() {
         Scanner input = new Scanner(System.in);
+        String answer;
+        
         do {
-            System.out.print("Masukan Kelipatan Angka = ");
-            int kelipatan = input.nextInt();
-            System.out.print("Masukan Rentang Kelipatan Angka = ");
-            int rentang = input.nextInt();
+            System.out.print("Enter the Multiple Number = ");
+            int multiple = input.nextInt();
+            System.out.print("Enter the Range for the Multiple = ");
+            int range = input.nextInt();
 
-            for (int x = kelipatan; x <= rentang; x += kelipatan) {
+            for (int x = multiple; x <= range; x += multiple) {
                 System.out.println(x + " ");
             }
-            System.out.print("Apakah Anda Ingin Mengulang Program Y/N? = ");
+            System.out.print("Do You Want to Repeat the Program Y/N? = ");
             answer = input.next();
         } while (answer.equalsIgnoreCase("Y"));
-
     }
 }
