@@ -1,6 +1,6 @@
 package week2;
 
-public class case4 {
+public class Case4 {
     public static void main(String[] args) {
         final double PI = 3.141592;
         double radius = 23.12;
