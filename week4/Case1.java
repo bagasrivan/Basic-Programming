@@ -2,7 +2,7 @@ package week4;
 
 import java.util.Scanner;
 
-public class case1 {
+public class Case1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int length, width, height;
