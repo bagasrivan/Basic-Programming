@@ -25,6 +25,7 @@ public class case2 {
                 break;
             default:
                 System.err.println("Invalid answer choice");
+                break;
         }
     }
 }
