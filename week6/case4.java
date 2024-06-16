@@ -1,60 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum6;
+package week6;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal4 {
+public class case4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Scanner input2 = new Scanner(System.in);
         int menu;
         int i = 0;
-        String nama = null, uname = null, pass = null;
+        String name = null, username = null, password = null;
 
-        System.out.println("Selamat Datang, Silahkan Masuk Ke Akun Anda");
-        System.out.println("Silahkan Pilih Menu : ");
-        System.out.println("1.Daftar \n2.Login");
-        System.out.print("Pilihan Menu Anda = ");
+        System.out.println("Welcome, Please Log In to Your Account");
+        System.out.println("Please Choose a Menu Option: ");
+        System.out.println("1. Register \n2. Login");
+        System.out.print("Your Menu Choice = ");
         menu = input.nextInt();
 
         do {
             if (menu == 1) {
-                System.out.println("Silahkan Lengkapi Data Dibawah Untuk Mendaftar");
-                System.out.print("Masukan Nama = ");
-                nama = input2.next();
+                System.out.println("Please Complete the Following Information to Register");
+                System.out.print("Enter Name = ");
+                name = input2.next();
 
-                System.out.print("Masukan Username = ");
-                uname = input2.next();
+                System.out.print("Enter Username = ");
+                username = input2.next();
 
-                System.out.print("Masukan Password = ");
-                pass = input2.next();
+                System.out.print("Enter Password = ");
+                password = input2.next();
 
-                if (nama.equals("bagaskararidhovandio") && (uname.equals("bagasgaming311") && (pass.equals("2211016310019")))) {
-                    System.out.println("Maaf, Akun Tersebut Sudah Terdaftar");
+                if (name.equals("bagaskararidhovandio") && (username.equals("bagasgaming311") && (password.equals("2211016310019")))) {
+                    System.out.println("Sorry, That Account Is Already Registered");
                 } else {
-                    System.out.println("Terimakasih Sudah Mendaftar, Silahkan Login Kembali");
+                    System.out.println("Thank You for Registering, Please Log In Again");
                 }
 
             } else if (menu == 2) {
-                System.out.println("Silahkan Masukan Username Dan Password");
-                System.out.print("Masukan Username = ");
-                uname = input2.next();
-                System.out.print("Masukan Password = ");
-                pass = input2.next();
+                System.out.println("Please Enter Your Username and Password");
+                System.out.print("Enter Username = ");
+                username = input2.next();
+                System.out.print("Enter Password = ");
+                password = input2.next();
                 i++;
 
-                if (uname.equals("bagasgaming31") && (pass.equals("2211016310019"))) {
-                    System.out.println("bagaskara ridho vandio Dengan NIM " + pass + " Login Sukses");
+                if (username.equals("bagasgaming31") && (password.equals("2211016310019"))) {
+                    System.out.println("bagaskara ridho vandio with NIM " + password + " Login Successful");
                     i++;
                 } else {
-                    System.err.println("Anda Belum Mendaftar, Silahkan Daftar Dahulu");
+                    System.err.println("You Have Not Registered, Please Register First");
                 }
             }
         } while (menu < 1);
