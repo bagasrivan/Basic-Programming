@@ -1,30 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum5;
-import java.util.Scanner;
+package week5;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal3 {
+public class case3 {
     public static void main(String[] args) {
         for (int i = 1; i <= 20; i++) {
             if (i % 3 == 0 && i % 6 == 0) {
-                System.out.println(i + " Kelipatan 3 dan 6");
+                System.out.println(i + " Multiple of 3 and 6");
             } else if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println(i + " Kelipatan 3 dan 5");
+                System.out.println(i + " Multiple of 3 and 5");
             } else if (i % 3 == 0) {
-                System.out.println(i + " Kelipatan 3");
+                System.out.println(i + " Multiple of 3");
             } else if (i % 6 == 0) {
-                System.out.println(i + " Kelipatan 6");
+                System.out.println(i + " Multiple of 6");
             } else if (i % 5 == 0) {
-                System.out.println(i + " Kelipatatn 5");
+                System.out.println(i + " Multiple of 5");
             } else {
-                System.out.println(i + " Bukan Kelipatan 3, 6, dan 5");
+                System.out.println(i + " Not a Multiple of 3, 6, or 5");
             }
         }
     }
