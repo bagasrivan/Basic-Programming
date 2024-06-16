@@ -2,7 +2,7 @@ package week1;
 
 import java.util.Scanner;
 
-public class case2 {
+public class Case2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
