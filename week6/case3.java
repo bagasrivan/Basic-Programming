@@ -1,37 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum6;
+package week6;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal3 {
+public class case3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int nilaiPertama, nilaiKedua;
-        System.out.println("Program Tabel Perkalian");
+        int firstValue, secondValue;
+        
+        System.out.println("Multiplication Table Program");
 
-        System.out.print("Masukan Nilai Pertama = ");
-        nilaiPertama = input.nextInt();
-        System.out.print("Masukan Nilai Kedua: ");
-        nilaiKedua = input.nextInt();
-        System.out.println("\nTabel Perkalian " + nilaiPertama + " Dan " + nilaiKedua);
+        System.out.print("Enter the first value = ");
+        firstValue = input.nextInt();
+        System.out.print("Enter the second value: ");
+        secondValue = input.nextInt();
+        System.out.println("\nMultiplication Table of " + firstValue + " and " + secondValue);
 
         System.out.println("\nx \t | \t1 \t2");
 
         System.out.println("==========================");
 
-        while (nilaiPertama <= nilaiKedua) {
-            int hasilKali1 = nilaiPertama * 1;
-            int hasilKali2 = nilaiPertama * 2;
+        while (firstValue <= secondValue) {
+            int product1 = firstValue * 1;
+            int product2 = firstValue * 2;
 
-            System.out.println(nilaiPertama + "\t | \t" + hasilKali1 + " \t" + hasilKali2);
-            nilaiPertama++;
+            System.out.println(firstValue + "\t | \t" + product1 + " \t" + product2);
+            firstValue++;
         }
     }
 }
