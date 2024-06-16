@@ -1,25 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praktikum5;
+package week5;
+
 import java.util.Scanner;
 
-/**
- *
- * @author Bagaskara
- */
-public class Soal2 {
+public class case2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int a, b, c, angka;
+        int a, b, c, number;
 
-        System.out.print("Masukan Jumlah Bintang = ");
-        angka = input.nextInt();
+        System.out.print("Enter the number of stars: ");
+        number = input.nextInt();
 
-        for (a = angka; a >= 0; a--) {
-            for (b = angka; b > a; b--) {
+        for (a = number; a >= 0; a--) {
+            for (b = number; b > a; b--) {
                 System.out.print(" ");
             }
             for (c = 1; c <= b; c++) {
@@ -29,14 +21,14 @@ public class Soal2 {
             System.out.println("");
         }
 
-        for (a = 0; a <= angka; a++) {
-            for (b = angka; b > a; b--) {
+        for (a = 0; a <= number; a++) {
+            for (b = number; b > a; b--) {
                 System.out.print(" ");
             }
             for (c = 1; c <= b; c++) {
                 System.out.print("*");
             }
-
+            
             System.out.println("");
         }
     }
